@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseurl = 'http://localhost:3000/';
+const baseurl = 'https://secprj-c8kj.vercel.app/';
 
 export const getTodos = async (setTodo) => {
     try {
