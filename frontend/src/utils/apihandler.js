@@ -3,7 +3,7 @@ const baseurl = 'https://secprj-c8kj.vercel.app/';
 
 export const getTodos = async (setTodo) => {
     try {
-        const response = await axios.get(`${baseurl}getTodo`);
+        const response = await axios.get(`${baseurl}getTodo`, { withCredentials: true });
         setTodo(response.data.data);
     } catch (error) {
         console.error("Error fetching todos:", error);
