@@ -27,7 +27,7 @@ export default function TodoApp() {
    updatedTodos(text,setText,setTodos,setIsUpdating,id);
   }
 
-  function updateModeOn (todotext, todoid) {
+  function updateModeOn (todotext, todoid,todo) {
     if(!todo.completed){
     setIsUpdating(true);
     setText(todotext);
