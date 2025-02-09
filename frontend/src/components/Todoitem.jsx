@@ -28,9 +28,13 @@ export default function TodoApp() {
   }
 
   function updateModeOn (todotext, todoid) {
+    if(!todo.completed){
     setIsUpdating(true);
     setText(todotext);
     setId(todoid);
+    } else{
+      alert("This task has been completed!")
+    }
   }
 
   const toggle = (todoid) => {
@@ -132,7 +136,7 @@ export default function TodoApp() {
                 </button>
                 <button
                 onClick={()=>{
-                  updateModeOn(todo.title,todo._id)
+                  updateModeOn(todo.title,todo._id,todo)
                 }}
                 className="text-white bg-blue-500 rounded-md p-2 hover:bg-blue-600 transition cursor-pointer">
                   <Edit size={18} />
